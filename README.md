@@ -1,44 +1,69 @@
-AgriRecoNet: Agricultural Recommendation Network
-A clean, reproducible benchmark for the classic Crop Recommendation problem using multiple machine learning baselines (Logistic Regression, KNN, SVM, Decision Tree, Random Forest, XGBoost) and a TensorFlow/Keras ANN. Includes EDA, preprocessing, scaling, evaluation via accuracy/F1, confusion matrices, and ROC curves.
+AgriRecoNet: Agricultural Recommendation Network 🌾
+A clean, reproducible benchmark for the classic Crop Recommendation problem. This project implements and evaluates multiple machine learning baselines and a deep learning model to predict the optimal crop based on environmental and soil features.
 
 ✨ Highlights
-End-to-end notebook: EDA ➜ preprocessing ➜ train/test ➜ evaluation
+This repository provides an end-to-end, ready-to-run solution for crop recommendation.
 
-Baselines: LR, KNN, SVM, DT, RF, XGBoost
+Comprehensive EDA: Includes visualizations like a correlation heatmap to understand feature relationships.
 
-Deep model: ANN (Keras Sequential)
+Multiple Baselines: Compares classic ML models: Logistic Regression, KNN, SVM, Decision Tree, Random Forest, and XGBoost.
 
-Visuals: correlation heatmap, confusion matrix, ROC
+Deep Learning Model: Features a custom Artificial Neural Network (ANN) built with TensorFlow/Keras.
 
-Ready to run locally (requirements included)
+Thorough Evaluation: Assesses models using accuracy, F1-score, confusion matrices, and ROC/AUC curves.
+
+Reproducible Environment: Comes with a requirements.txt file for easy setup.
 
 📦 Dataset
-Name: Crop Recommendation Dataset
+The model is trained on the Crop Recommendation Dataset, which contains the following features:
 
-Source path used in notebook: Crop_recommendation.csv (or Kaggle path)
-Replace the path in the notebook with your local path if needed.
+Soil Nutrients: Nitrogen (N), Phosphorous (P), Potassium (K)
 
-Features typically include soil nutrients (N, P, K), temperature, humidity, pH, rainfall, etc.
-Target is the recommended crop label.
+Soil Condition: pH value
 
-Note: The notebook supports either a local CSV (e.g., data/Crop_recommendation.csv) or a Kaggle dataset path. Create a data/ folder and place the CSV there, or update the path in the "Data Load" cell.
+Environmental Factors: Temperature, Humidity, Rainfall
 
-🛠️ Environment
-bash
-Copy
-Edit
+The target variable is the recommended crop label (e.g., Rice, Maize, Chickpea, etc.).
+
+To Use:
+The notebook is configured to load Crop_recommendation.csv from a data/ directory.
+
+Create a folder named data in the root of the project.
+
+Download the dataset from Kaggle and place it inside the data/ folder.
+
+Alternatively, update the path in the "Data Load" cell of the notebook to your specific file location.
+
+🛠️ Setup & Run
+Get up and running in a few simple steps.
+
+Clone the repository:
+
+Bash
+
+git clone https://github.com/your-username/AgriRecoNet.git
+cd AgriRecoNet
+Create and activate a virtual environment:
+
+Bash
+
+# Create the environment
 python -m venv .venv
-source .venv/bin/activate   # (Linux/Mac)
+
+# Activate it (Linux/Mac)
+source .venv/bin/activate
+
+# Activate it (Windows)
+.\.venv\Scripts\activate
+Install the required packages:
+
+Bash
+
 pip install -r requirements.txt
-▶️ Run
-Open the notebook in VS Code or Jupyter and run all cells.
-If you use VS Code:
+Launch the notebook:
+Open the AgriRecoNet.ipynb notebook in VS Code or Jupyter and run the cells.
 
-Install the Python and Jupyter extensions.
-
-Select your .venv interpreter.
-
-Run cells with Shift+Enter.
+In VS Code: Ensure you have the Python and Jupyter extensions installed. Select the .venv interpreter from the command palette (Ctrl+Shift+P).
 
 🧪 Models Included
 Logistic Regression
@@ -53,9 +78,11 @@ Random Forest
 
 XGBoost
 
-Artificial Neural Network (ANN, Keras/TensorFlow)
+Artificial Neural Network (ANN)
 
-🧪 Results
+📈 Results & Evaluation
+The models were evaluated based on their accuracy on the test set.
+
 Model	Accuracy (%)
 Naive Bayes	99.64
 Random Forest	99.45
@@ -63,38 +90,42 @@ XGBoost	99.45
 Gradient Boosting	99.09
 Decision Tree	98.73
 Artificial Neural Network (ANN)	98.18
-SVM	98.00
+Support Vector Machine (SVM)	98.00
 Logistic Regression	97.27
-KNN	95.82
+K-Nearest Neighbors (KNN)	95.82
 
-📈 Evaluation
-Accuracy, F1 (macro/weighted as configured)
+Export to Sheets
+Evaluation is performed using:
+
+Accuracy Score
+
+F1 Score (Macro/Weighted)
 
 Confusion Matrix
 
-ROC / AUC (one-vs-rest for multi-class)
+ROC / AUC Curves (One-vs-Rest for multi-class classification)
 
-🗂️ Repo Structure
-Copy
-Edit
+🗂️ Repository Structure
 AgriRecoNet/
-├─ AgriRecoNet.ipynb
-├─ requirements.txt
-├─ .gitignore
-└─ README.md
-🔑 Keywords
-agriculture machine learning, crop recommendation, soil nutrients, nitrogen phosphorous potassium, pH, rainfall, temperature, humidity, XGBoost, Random Forest, SVM, KNN, ANN, TensorFlow, Keras, SHAP, EDA, classification
+├── AgriRecoNet.ipynb
+├── requirements.txt
+├── .gitignore
+└── README.md
+🧭 Roadmap
+Future enhancements planned for this project:
+
+[ ] Implement hyperparameter tuning sweeps (Optuna/Scikit-Optimize).
+
+[ ] Integrate cross-validation with stratification for more robust evaluation.
+
+[ ] Add model explainability using SHAP across all models.
+
+[ ] Create a script to export the best-performing model as a saved artifact for deployment.
 
 📌 Notes
-If you run into GPU errors with TensorFlow, switch to CPU or install the appropriate CUDA/cuDNN combo.
+TensorFlow Errors: If you encounter GPU errors with TensorFlow, try running on a CPU or ensure you have the correct CUDA/cuDNN versions installed for your hardware.
 
-XGBoost is optional; you can comment it out if installation is an issue on your machine.
+XGBoost: This library is optional. If you face installation issues, you can comment out the XGBoost-related cells in the notebook.
 
-🧭 Roadmap
-Hyperparameter sweeps (Optuna/Scikit-Optimize)
-
-Cross-validation with stratification
-
-Model explainability (SHAP) across all models
-
-Export best model as a saved artifact
+🔑 Keywords
+agriculture machine learning, crop recommendation, soil nutrients, nitrogen, phosphorous, potassium, pH, rainfall, temperature, humidity, XGBoost, Random Forest, SVM, KNN, ANN, TensorFlow, Keras, EDA, classification.
