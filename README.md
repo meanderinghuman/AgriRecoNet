@@ -45,7 +45,7 @@ Get up and running in a few simple steps.
 
 1.  **Clone the repository:**
     ```bash
-    git clone [https://github.com/your-username/AgriRecoNet.git](https://github.com/your-username/AgriRecoNet.git)
+    git clone [https://github.com/your-username/AgriRecoNet.git](https://github.com/meanderinghuman/AgriRecoNet.git)
     cd AgriRecoNet
     ```
 
@@ -114,7 +114,6 @@ AgriRecoNet/
 ├── requirements.txt
 ├── .gitignore
 └── README.md
-
 ---
 
 ## 🧭 Roadmap
