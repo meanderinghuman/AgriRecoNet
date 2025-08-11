@@ -2,7 +2,7 @@
 
 A clean, reproducible benchmark for the classic **Crop Recommendation** problem. This project implements and evaluates multiple machine learning baselines and a deep learning model to predict the optimal crop based on environmental and soil features.
 
-![GitHub](https://img.shields.io/github/license/google/gemini-python?style=for-the-badge)
+![GitHub License](https://img.shields.io/github/license/meanderinghuman/AgriRecoNet?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.9%2B-blue?style=for-the-badge&logo=python)
 ![Frameworks](https://img.shields.io/badge/TensorFlow%20%7C%20Scikit--Learn-orange?style=for-the-badge&logo=tensorflow)
 
