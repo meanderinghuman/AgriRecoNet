@@ -107,13 +107,14 @@ Evaluation is performed using:
 * **ROC / AUC Curves** (One-vs-Rest for multi-class classification)
 
 ---
-
 ## 🗂️ Repository Structure
+```
 AgriRecoNet/
 ├── AgriRecoNet.ipynb
 ├── requirements.txt
 ├── .gitignore
 └── README.md
+```
 ---
 
 ## 🧭 Roadmap
